@@ -1,0 +1,59 @@
+{
+  "shennongding": {
+    "imageName": "shennongding",
+    "heightOffset": 50,
+    "scaleFactor": 15,
+    "cameraPosition": 600,
+    "maxDistance": 800,
+    "minDistance": 500
+  },
+  "siguniangshan": {
+    "imageName": "siguniangshan",
+    "heightOffset": 200,
+    "scaleFactor": 12,
+    "cameraPosition": 1200,
+    "maxDistance": 1800,
+    "minDistance": 1200
+  },
+  "dapingshan": {
+    "imageName": "dapingshan",
+    "heightOffset": 80,
+    "scaleFactor": 12,
+    "cameraPosition": 600,
+    "maxDistance": 1000,
+    "minDistance": 500
+  },
+  "luxijiao": {
+    "imageName": "luxijiao",
+    "heightOffset": -50,
+    "scaleFactor": 8,
+    "cameraPosition": 850,
+    "maxDistance": 1500,
+    "minDistance": 600
+  },
+  "bengchinandang": {
+    "imageName": "bengchinandang",
+    "heightOffset": 115,
+    "scaleFactor": 12,
+    "cameraPosition": 1200,
+    "maxDistance": 1800,
+    "minDistance": 1200
+  },
+
+  "si1": {
+    "imageName": "si1",
+    "heightOffset": 1,
+    "scaleFactor": 0.5,
+    "cameraPosition": 4000,
+    "maxDistance": 4000,
+    "minDistance": 1200
+  },
+  "si2": {
+    "imageName": "si2",
+    "heightOffset": 1,
+    "scaleFactor": 20,
+    "cameraPosition": 4000,
+    "maxDistance": 4000,
+    "minDistance": 1200
+  }
+}

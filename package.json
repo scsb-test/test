@@ -1,0 +1,44 @@
+{
+  "name": "fe_cgsdk_vue3",
+  "version": "0.1.1",
+  "private": true,
+  "config": {
+    "buildDir": "cg_earth_globe",
+    "buildFileName": "CgEarthGlobe"
+  },
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "prebuild-lib": "if exist lib\\%npm_package_config_buildDir% (mkdir lib\\buildBak && copy lib\\%npm_package_config_buildDir%\\package.json lib\\buildBak\\package.json.bak && copy lib\\%npm_package_config_buildDir%\\README.md lib\\buildBak\\README.md.bak)",
+    "build-lib": "vue-cli-service build --target lib --name %npm_package_config_buildFileName% --dest lib\\%npm_package_config_buildDir% --entry packages/%npm_package_config_buildDir%/index.js",
+    "postbuild-lib": "if exist lib\\buildBak (copy lib\\buildBak\\package.json.bak lib\\%npm_package_config_buildDir%\\package.json && copy lib\\buildBak\\README.md.bak lib\\%npm_package_config_buildDir%\\README.md && del lib\\buildBak\\package.json.bak && del lib\\buildBak\\README.md.bak && rmdir lib\\buildBak)",
+    "prebuild-lib-mac": "if [ -d \"lib/${npm_package_config_buildDir}\" ]; then mkdir -p lib/buildBak && cp \"lib/${npm_package_config_buildDir}/package.json\" \"lib/buildBak/package.json.bak\" && cp \"lib/${npm_package_config_buildDir}/README.md\" \"lib/buildBak/README.md.bak\"; fi",
+    "build-lib-mac": "vue-cli-service build --target lib --name ${npm_package_config_buildFileName} --dest lib/${npm_package_config_buildDir} --entry packages/${npm_package_config_buildDir}/index.js",
+    "postbuild-lib-mac": "if [ -d \"lib/buildBak\" ]; then cp \"lib/buildBak/package.json.bak\" \"lib/${npm_package_config_buildDir}/package.json\" && cp \"lib/buildBak/README.md.bak\" \"lib/${npm_package_config_buildDir}/README.md\" && rm -f \"lib/buildBak/package.json.bak\" \"lib/buildBak/README.md.bak\" && rmdir \"lib/buildBak\"; fi"
+  },
+  "dependencies": {
+    "@types/proj4": "^2.5.6",
+    "axios": "^1.8.1",
+    "cesium": "^1.92.0",
+    "cesium-navigation-es6": "^3.0.9",
+    "core-js": "^3.8.3",
+    "geotiff": "^2.1.3",
+    "proj4": "^2.15.0",
+    "test-cg-libs": "^1.0.7",
+    "three": "^0.165.0",
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^5.1.2",
+    "cross-var": "^1.1.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-vue": "^8.0.3"
+  }
+}
